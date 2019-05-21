@@ -31,36 +31,36 @@ class Vec3 {
 
 //vector calc
 Vec3 operator+(const Vec3& v1, const Vec3& v2) {
-    return Vec3(v1.x + v2.x, v1.y + v2.x, v1.z + v2.z);
+    return Vec3(v1.x + v2.x, v1.y + v2.y, v1.z + v2.z);
 }
 
 Vec3 operator-(const Vec3& v1, const Vec3& v2) {
-    return Vec3(v1.x - v1.x, v1.y - v1.y, v1.z - v1.z);
+    return Vec3(v1.x - v2.x, v1.y - v2.y, v1.z - v2.z);
 }
 
 Vec3 operator*(const Vec3& v1, const Vec3& v2) {
-    return Vec3(v1.x * v2.x, v1.y * v2.x, v1.z * v2.z);
+    return Vec3(v1.x * v2.x, v1.y * v2.y, v1.z * v2.z);
 }
 
 Vec3 operator/(const Vec3& v1, const Vec3& v2) {
-    return Vec3(v1.x / v1.x, v1.y / v1.y, v1.z / v1.z);
+    return Vec3(v1.x / v2.x, v1.y / v2.y, v1.z / v2.z);
 }
 
 //vectorxscalor calc
 Vec3 operator+(const Vec3& v, double k){
-    return(v.x + k, v.y + k, v.z + k);
+    return Vec3(v.x + k, v.y + k, v.z + k);
 }
 
 Vec3 operator-(const Vec3& v, double k){
-    return(v.x - k, v.y - k, v.z - k);
+    return Vec3(v.x - k, v.y - k, v.z - k);
 }
 
 Vec3 operator*(const Vec3& v, double k){
-    return(v.x * k, v.y * k, v.z * k);
+    return Vec3(v.x * k, v.y * k, v.z * k);
 }
 
 Vec3 operator/(const Vec3& v, double k){
-    return(v.x / k, v.y / k, v.z / k);
+    return Vec3(v.x / k, v.y / k, v.z / k);
 }
 
 // dot
@@ -69,8 +69,8 @@ double dot(const Vec3& v1, const Vec3& v2){
 }
 
 //cross
-double cross(const Vec3& v1, const Vec3& v2){
-    return(v1.y * v2.z - v1.z * v2.y, v1.z * v2.x - v1.x * v2.z, v1.x * v2.y - v1.y * v2.x);
+Vec3 cross(const Vec3& v1, const Vec3& v2){
+    return Vec3(v1.y*v2.z - v1.z*v2.y, v1.z*v2.x-v1.x*v2.z, v1.x*v2.y - v1.y*v2.x);
 }
 
 Vec3 normalize(const Vec3& v){
