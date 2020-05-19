@@ -24,8 +24,8 @@ int main(){
       //double u = (2.0 * i - img.width)/img.width;
       //double v = (2.0 * j - img.height)/img.height;
 
-      double u = (2.0 * j - img.height)/img.width;
-      double v = (2.0 * i - img.width )/img.height;
+      double u = (2.0 * j - img.height)/img.height;
+      double v = (2.0 * i - img.width )/img.width;
       Ray ray = cam.getRay(-u, -v);
 
       Hit res;
