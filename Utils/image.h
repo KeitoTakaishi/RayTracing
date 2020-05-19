@@ -31,6 +31,19 @@ class Image{
       data[i * width + j] = c;
     };
 
+    void addPixel(int i, int j, const Vec3& c){
+      //data[i + width * j] = c;
+      data[i * width + j] = c + data[i * width + j];
+    };
+
+    void divide(const double& k) {
+      for(int r = 0; r < height; r++) {
+        for(int c = 0; c < width; c++) {
+          setPixel(r, c, getPixel(r, c)/k);
+        }
+      }
+      return;
+    }
     void ganmma_correction(){
         for(int i = 0; i < i < width; i++){
             for(int j = 0; j < height; j++){
