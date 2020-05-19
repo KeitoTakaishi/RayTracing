@@ -3,7 +3,6 @@
 #include "../Utils/image.h"
 #include "../Utils/camera.h"
 
-//rayの方向を色として出力
 int main(){
     Image img(512, 512);
     PinholeCamera cam(Vec3(0.0, 0.0, 0.0), Vec3(0.0, 0.0, -1.), 1.0);

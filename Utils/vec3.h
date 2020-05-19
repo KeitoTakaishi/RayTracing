@@ -90,4 +90,4 @@ std::ostream& operator<<(std::ostream& stream, const Vec3& v){
     stream << "(" << v.x << ", " << v.y << ", " << v.z << ")";
     return stream;
 }
-#endif 
+#endif
